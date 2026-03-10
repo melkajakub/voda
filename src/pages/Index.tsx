@@ -29,11 +29,11 @@ const Index = () => {
   }, [typingDone]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-8 md:p-16">
-      <div className="w-full max-w-[900px] flex flex-col items-center">
+    <div className="flex min-h-screen items-center justify-center p-4 md:p-12">
+      <div className="w-full max-w-[960px] flex flex-col items-center">
         <h1
-          className="text-foreground text-center text-2xl md:text-3xl lg:text-4xl tracking-tight uppercase"
-          style={{ fontFamily: "var(--font-heading)", fontWeight: 700, minHeight: "2.5em" }}
+          className="text-foreground text-center text-xl md:text-2xl lg:text-3xl tracking-tight uppercase"
+          style={{ fontFamily: "var(--font-heading)", fontWeight: 700, minHeight: "2em" }}
         >
           {displayedText}
           {!typingDone && (
@@ -41,7 +41,7 @@ const Index = () => {
           )}
         </h1>
 
-        <div className="w-full flex justify-center mt-4 mb-8">
+        <div className="w-full flex justify-center mt-3 mb-4">
           <motion.div
             className="h-[2px] bg-primary"
             initial={{ width: 0 }}
@@ -51,15 +51,14 @@ const Index = () => {
         </div>
 
         <motion.div
-          className="w-full"
+          className="w-full relative"
           initial={{ opacity: 0 }}
           animate={{ opacity: lineExpanded ? 1 : 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
-          style={{ aspectRatio: "872 / 539" }}
+          style={{ paddingBottom: "61.8%", height: 0 }}
         >
           <iframe
-            width="100%"
-            height="100%"
+            className="absolute inset-0 w-full h-full"
             seamless
             frameBorder="0"
             scrolling="no"
