@@ -64,7 +64,6 @@ const Index = () => {
             title="Denní spotřeba obecní vody na jatečním závodě"
             style={{ border: "none", width: "100%", height: "70vh", minHeight: "400px" }}
           />
-          />
         </motion.div>
       </div>
     </div>
