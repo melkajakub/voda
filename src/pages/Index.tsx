@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const TITLE = "DENNÍ SPOTŘEBA OBECNÍ VODY NA JATEČNÍM ZÁVODĚ";
 const CHART_W = 872;
-const CHART_H = 539;
+const CHART_H = 600;
 
 const Index = () => {
   const [displayedText, setDisplayedText] = useState("");
