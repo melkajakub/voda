@@ -67,7 +67,6 @@ const Index = () => {
             style={{ border: "none", display: "block", margin: "0 auto", maxWidth: "100%" }}
           />
         </motion.div>
-        </motion.div>
       </div>
     </div>
   );
