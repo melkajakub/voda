@@ -55,15 +55,17 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: lineExpanded ? 1 : 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
+          style={{ aspectRatio: "872 / 539" }}
         >
           <iframe
             width="100%"
-            height="539"
+            height="100%"
             seamless
             frameBorder="0"
             scrolling="no"
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=interactive"
             title="Denní spotřeba obecní vody na jatečním závodě"
+            style={{ border: "none" }}
           />
         </motion.div>
       </div>
