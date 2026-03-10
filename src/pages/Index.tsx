@@ -57,14 +57,13 @@ const Index = () => {
           transition={{ duration: 0.3, delay: 0.2 }}
         >
           <iframe
-            width="872"
-            height="539"
             seamless
             frameBorder="0"
             scrolling="no"
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=interactive"
             title="Denní spotřeba obecní vody na jatečním závodě"
-            style={{ border: "none", width: "100%", minHeight: "540px" }}
+            style={{ border: "none", width: "100%", height: "70vh", minHeight: "400px" }}
+          />
           />
         </motion.div>
       </div>
