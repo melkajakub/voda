@@ -29,7 +29,7 @@ const Index = () => {
   }, [typingDone]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-4 md:p-12">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-12">
       <div className="w-full max-w-[960px] flex flex-col items-center">
         <h1
           className="text-foreground text-center text-xl md:text-2xl lg:text-3xl tracking-tight uppercase"
@@ -51,20 +51,20 @@ const Index = () => {
         </div>
 
         <motion.div
-          className="w-full relative"
+          className="w-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: lineExpanded ? 1 : 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
-          style={{ paddingBottom: "61.8%", height: 0 }}
         >
           <iframe
-            className="absolute inset-0 w-full h-full"
+            width="872"
+            height="539"
             seamless
             frameBorder="0"
             scrolling="no"
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=interactive"
             title="Denní spotřeba obecní vody na jatečním závodě"
-            style={{ border: "none" }}
+            style={{ border: "none", width: "100%", minHeight: "540px" }}
           />
         </motion.div>
       </div>
