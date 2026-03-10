@@ -51,19 +51,22 @@ const Index = () => {
         </div>
 
         <motion.div
-          className="w-full"
+          className="w-full overflow-x-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: lineExpanded ? 1 : 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
         >
           <iframe
+            width="872"
+            height="539"
             seamless
             frameBorder="0"
             scrolling="no"
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=interactive"
             title="Denní spotřeba obecní vody na jatečním závodě"
-            style={{ border: "none", width: "100%", height: "70vh", minHeight: "400px" }}
+            style={{ border: "none", display: "block", margin: "0 auto", maxWidth: "100%" }}
           />
+        </motion.div>
         </motion.div>
       </div>
     </div>
