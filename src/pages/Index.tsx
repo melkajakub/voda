@@ -59,14 +59,16 @@ const Index = () => {
             position: "relative",
             width: "100%",
             height: 0,
-            paddingBottom: "75%", /* 4:3 aspect ratio */
+            paddingBottom: "61.88%", /* 1302:806 aspect ratio */
           }}
         >
           <iframe
+            width="1302"
+            height="806"
             seamless
             frameBorder="0"
             scrolling="no"
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=interactive"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=image"
             title="Denní spotřeba obecní vody na jatečním závodě"
             style={{
               position: "absolute",
