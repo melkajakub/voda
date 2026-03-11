@@ -1,16 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const TITLE = "DENNÍ SPOTŘEBA OBECNÍ VODY NA JATEČNÍM ZÁVODĚ";
-const CHART_W = 872;
-const CHART_H = 700;
 
 const Index = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [typingDone, setTypingDone] = useState(false);
   const [lineExpanded, setLineExpanded] = useState(false);
-  const [scale, setScale] = useState(1);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let i = 0;
@@ -32,21 +28,9 @@ const Index = () => {
     }
   }, [typingDone]);
 
-  useEffect(() => {
-    const updateScale = () => {
-      if (containerRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        setScale(Math.min(1, containerWidth / CHART_W));
-      }
-    };
-    updateScale();
-    window.addEventListener("resize", updateScale);
-    return () => window.removeEventListener("resize", updateScale);
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-12">
-      <div ref={containerRef} className="w-full max-w-[960px] flex flex-col items-center">
+      <div className="w-full max-w-[960px] flex flex-col items-center">
         <h1
           className="text-foreground text-center text-xl md:text-2xl lg:text-3xl tracking-tight uppercase"
           style={{ fontFamily: "var(--font-heading)", fontWeight: 700, minHeight: "2em" }}
@@ -71,20 +55,26 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: lineExpanded ? 1 : 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
-          style={{ height: CHART_H * scale }}
+          style={{
+            position: "relative",
+            width: "100%",
+            height: 0,
+            paddingBottom: "75%", /* 4:3 aspect ratio */
+          }}
         >
           <iframe
-            width={CHART_W}
-            height={CHART_H}
             seamless
             frameBorder="0"
             scrolling="no"
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=interactive"
             title="Denní spotřeba obecní vody na jatečním závodě"
             style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
               border: "none",
-              transformOrigin: "top left",
-              transform: `scale(${scale})`,
             }}
           />
         </motion.div>
