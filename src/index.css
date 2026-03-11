@@ -57,9 +57,9 @@
   width: 100%;
   max-width: 1200px;
   margin: 20px auto;
-  height: 0;
-  padding-bottom: 65%;
-  overflow: hidden;
+  min-height: 500px;
+  height: 70vh;
+  max-height: 800px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
