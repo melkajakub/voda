@@ -56,12 +56,10 @@ const Index = () => {
           transition={{ duration: 0.3, delay: 0.2 }}
           className="responsive-graf"
         >
-          <iframe
-            seamless
-            frameBorder="0"
-            scrolling="no"
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=interactive"
-            title="Denní spotřeba obecní vody na jatečním závodě"
+          <img
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3cHr88oVDKOfcwzF52WvshleGxh-sBYJpJQJz6eHnEq172WZSev7DwtFQ5vRnNcKUUi9RG_8MaAEd/pubchart?oid=1755788134&format=image"
+            alt="Denní spotřeba obecní vody na jatečním závodě"
+            className="w-full h-auto"
           />
         </motion.div>
       </div>
