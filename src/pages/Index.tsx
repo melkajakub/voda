@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const TITLE = "DENNÍ SPOTŘEBA OBECNÍ VODY NA JATEČNÍM ZÁVODĚ";
+const TITLE = "DENNÍ SPOTŘEBA CIZÍ VODY NA JATEČNÍM ZÁVODĚ";
 
 const Index = () => {
   const [displayedText, setDisplayedText] = useState("");
